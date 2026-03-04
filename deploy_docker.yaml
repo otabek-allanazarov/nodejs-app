@@ -1,0 +1,60 @@
+- name: docker paketlarini ornatish
+  hosts: all
+  gather_facts: false #false qilish kerak, kutish rejimi uchun
+  become: true
+  tasks:
+    - name: kutishni sozlash
+      wait_for:
+        port: 22
+        host: "{{ host_ip }}"
+        search_regex: OpenSSH
+        delay: 10
+        timeout: 300
+      delegate_to: localhost
+      become: false
+    - name: Docker ni ornatish
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+        cache_valid_time: 3600
+    - name: docker compose uchun folder yaratish
+      file:
+        path: /usr/local/lib/docker/cli-plugins
+        state: directory
+        mode: 755
+    - name: v2 fileni yuklab olish
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/v2.40.1/docker-compose-linux-x86_64"
+        dest: /usr/local/lib/docker/cli-plugins/docker-compose
+        mode: +x
+    - name: start docker servise 
+      service:
+        name: docker
+        state: started
+    - name: add user to docker group 
+      user:
+        name: admin
+        group: docker
+    - name: Reconnect to server
+      meta: reset_connection
+
+- name: docker app ni deploy qilish
+  hosts: all
+  become: true
+  gather_facts: false
+  vars_files: docker_authorize.yml
+  tasks:
+    - name: compose fileni copy qilish
+      copy:
+        src: ./docker-compose.yml
+        dest: /home/admin
+    - name: docker login qilish (private image bo'lsa)
+      community.docker.docker_login:
+        username: "{{ docker_username }}"
+        password: "{{ docker_password }}"
+      ignore_errors: true
+    - name: run docker compose
+      community.docker.docker_compose_v2:
+        project_src: /home/admin/
+        state: present

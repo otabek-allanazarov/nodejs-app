@@ -1,0 +1,26 @@
+[web-server]
+#10.99.1.3 ansible_user=userjon
+192.168.77.250 
+
+[web-server:vars]
+ansible_user=userjon
+ansible_port=22
+http_port=8080
+
+[aws]
+16.171.57.45
+
+
+[database]
+#10.99.1.4 
+192.168.77.250 
+
+
+[ungrouped]
+#10.99.1.3 ansible_user=userjon
+192.168.77.250 ansible_user=userjon
+
+[metagroup:children]
+web-server
+database
+ungrouped

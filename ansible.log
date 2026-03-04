@@ -1,0 +1,502 @@
+2025-10-27 14:05:17,467 p=17004 u=otabek n=ansible | [WARNING]: Error getting vault password file (default): The vault password file
+/home/otabek/devops_homeworks/nodejs-app-ansible/vault_pass.txt was not found
+
+2025-10-27 14:05:17,467 p=17004 u=otabek n=ansible | ERROR! The vault password file /home/otabek/devops_homeworks/nodejs-app-ansible/vault_pass.txt was not found
+2025-10-27 14:05:44,618 p=17047 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2025-10-27 14:05:44,744 p=17047 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 14:05:44,751 p=17047 u=otabek n=ansible | TASK [Docker ni ornatish] ******************************************************
+2025-10-27 14:05:51,437 p=17047 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:05:51,441 p=17047 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ************************************
+2025-10-27 14:05:53,419 p=17047 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:05:53,423 p=17047 u=otabek n=ansible | TASK [v2 fileni yuklab olish] **************************************************
+2025-10-27 14:05:55,653 p=17047 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:05:55,661 p=17047 u=otabek n=ansible | TASK [start docker servise] ****************************************************
+2025-10-27 14:05:59,630 p=17047 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:05:59,631 p=17047 u=otabek n=ansible | TASK [add user to docker group] ************************************************
+2025-10-27 14:06:01,496 p=17047 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:06:01,499 p=17047 u=otabek n=ansible | TASK [Reconnect to server] *****************************************************
+2025-10-27 14:06:01,522 p=17047 u=otabek n=ansible | PLAY [docker app ni deploy qilish] *********************************************
+2025-10-27 14:06:01,532 p=17047 u=otabek n=ansible | TASK [compose fileni copy qilish] **********************************************
+2025-10-27 14:06:08,036 p=17047 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:06:08,038 p=17047 u=otabek n=ansible | TASK [docker login qilish] *****************************************************
+2025-10-27 14:06:08,051 p=17047 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'docker_username' is undefined. 'docker_username' is undefined\n\nThe error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/deploy_docker.yaml': line 43, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n        dest: /home/ubuntu\n    - name: docker login qilish # qachonki image pivate bolsa\n      ^ here\n"}
+2025-10-27 14:06:08,052 p=17047 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 14:06:08,052 p=17047 u=otabek n=ansible | 16.171.57.45               : ok=6    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:07:20,912 p=17215 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:07:21,004 p=17215 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:07:21,009 p=17215 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:07:25,218 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:25,221 p=17215 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:07:27,184 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:27,188 p=17215 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:07:29,225 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:29,229 p=17215 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:07:33,102 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:33,104 p=17215 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:07:34,973 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:34,978 p=17215 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:07:35,016 p=17215 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:07:35,021 p=17215 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:07:40,601 p=17215 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:07:40,604 p=17215 u=otabek n=ansible | TASK [docker login qilish] ****************************************************************************************
+2025-10-27 14:07:40,621 p=17215 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'docker_username' is undefined. 'docker_username' is undefined\n\nThe error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/deploy_docker.yaml': line 43, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n        dest: /home/ubuntu\n    - name: docker login qilish # qachonki image pivate bolsa\n      ^ here\n"}
+2025-10-27 14:07:40,621 p=17215 u=otabek n=ansible | ...ignoring
+2025-10-27 14:07:40,622 p=17215 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:07:42,658 p=17215 u=otabek n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ModuleNotFoundError: No module named 'docker'
+2025-10-27 14:07:42,659 p=17215 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker>=5.0.0 (Python >= 3.6) or docker<5.0.0 (Python 2.7)) on ip-172-31-100-42's Python /usr/bin/python3. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` (Python >= 3.6) or `pip install docker==4.4.4` (Python 2.7). The error was: No module named 'docker'"}
+2025-10-27 14:07:42,660 p=17215 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:07:42,660 p=17215 u=otabek n=ansible | 16.171.57.45               : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2025-10-27 14:16:19,229 p=17727 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:16:19,366 p=17727 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:16:19,372 p=17727 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:16:23,534 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:23,537 p=17727 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:16:25,457 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:25,461 p=17727 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:16:28,142 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:28,152 p=17727 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:16:32,038 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:32,042 p=17727 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:16:33,913 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:33,917 p=17727 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:16:33,949 p=17727 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:16:33,961 p=17727 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:16:39,757 p=17727 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:16:39,761 p=17727 u=otabek n=ansible | TASK [docker login qilish] ****************************************************************************************
+2025-10-27 14:16:42,941 p=17727 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:16:42,945 p=17727 u=otabek n=ansible | TASK [venv ni install qilish] *************************************************************************************
+2025-10-27 14:16:50,800 p=17727 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:16:50,811 p=17727 u=otabek n=ansible | TASK [venv ga otvolish] *******************************************************************************************
+2025-10-27 14:16:52,914 p=17727 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": true, "cmd": "source myansible-venv/bin/activate", "delta": "0:00:00.004816", "end": "2025-10-27 09:16:52.686389", "msg": "non-zero return code", "rc": 127, "start": "2025-10-27 09:16:52.681573", "stderr": "/bin/sh: 1: source: not found", "stderr_lines": ["/bin/sh: 1: source: not found"], "stdout": "", "stdout_lines": []}
+2025-10-27 14:16:52,916 p=17727 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:16:52,916 p=17727 u=otabek n=ansible | 16.171.57.45               : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:17:24,093 p=17860 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:17:24,199 p=17860 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:17:24,204 p=17860 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:17:27,175 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:27,178 p=17860 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:17:29,226 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:29,229 p=17860 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:17:31,438 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:31,442 p=17860 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:17:35,538 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:35,541 p=17860 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:17:37,513 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:37,518 p=17860 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:17:37,550 p=17860 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:17:37,557 p=17860 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:17:43,720 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:43,725 p=17860 u=otabek n=ansible | TASK [docker login qilish] ****************************************************************************************
+2025-10-27 14:17:45,876 p=17860 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:17:45,882 p=17860 u=otabek n=ansible | TASK [venv ni install qilish] *************************************************************************************
+2025-10-27 14:17:48,190 p=17860 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "No package matching 'python-venv' is available"}
+2025-10-27 14:17:48,191 p=17860 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:17:48,192 p=17860 u=otabek n=ansible | 16.171.57.45               : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:35:14,216 p=18611 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:35:14,319 p=18611 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:35:14,325 p=18611 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:35:18,491 p=18611 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:35:18,494 p=18611 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:35:20,364 p=18611 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:35:20,367 p=18611 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:35:22,524 p=18611 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:35:22,528 p=18611 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:35:26,413 p=18611 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:35:26,415 p=18611 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:35:28,255 p=18611 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:35:28,259 p=18611 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:35:28,289 p=18611 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:35:28,295 p=18611 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:35:31,108 p=18611 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"msg": "Failed to get information on remote file (/home/ubuntu): Shared connection to 16.171.57.45 closed.\r\n"}
+2025-10-27 14:35:31,110 p=18611 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:35:31,110 p=18611 u=otabek n=ansible | 16.171.57.45               : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:36:03,229 p=18686 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:36:05,578 p=18686 u=otabek n=ansible | 16.171.57.45 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-27 14:38:31,660 p=18838 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:38:34,948 p=18838 u=otabek n=ansible | 16.171.57.45 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2025-10-27 14:38:37,044 p=18855 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:38:37,152 p=18855 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:38:37,157 p=18855 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:38:40,043 p=18855 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:38:40,046 p=18855 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:38:42,024 p=18855 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:38:42,027 p=18855 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:38:44,531 p=18855 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:38:44,536 p=18855 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:38:48,971 p=18855 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:38:48,973 p=18855 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:38:50,999 p=18855 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:38:51,002 p=18855 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:38:51,034 p=18855 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:38:51,039 p=18855 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:38:53,746 p=18855 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"msg": "Failed to get information on remote file (/home/ubuntu/myansible-venv/bin/python): Shared connection to 16.171.57.45 closed.\r\n"}
+2025-10-27 14:38:53,747 p=18855 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:38:53,747 p=18855 u=otabek n=ansible | 16.171.57.45               : ok=5    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:42:16,571 p=19082 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:42:16,672 p=19082 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:42:16,677 p=19082 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:42:20,779 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:20,782 p=19082 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:42:22,711 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:22,715 p=19082 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:42:24,938 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:24,942 p=19082 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:42:28,932 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:28,935 p=19082 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:42:31,237 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:31,239 p=19082 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:42:31,254 p=19082 u=otabek n=ansible | TASK [python3-venv o'rnatish] *************************************************************************************
+2025-10-27 14:42:35,374 p=19082 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:42:35,376 p=19082 u=otabek n=ansible | TASK [venv yaratish] **********************************************************************************************
+2025-10-27 14:42:40,994 p=19082 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:42:40,996 p=19082 u=otabek n=ansible | TASK [pipni yangilash] ********************************************************************************************
+2025-10-27 14:42:44,676 p=19082 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:42:44,679 p=19082 u=otabek n=ansible | TASK [docker kutubxonalarini o'rnatish] ***************************************************************************
+2025-10-27 14:42:49,874 p=19082 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": true, "cmd": ["/home/ubuntu/myansible-venv/bin/pip", "install", "docker", "docker-compose"], "delta": "0:00:03.335578", "end": "2025-10-27 09:42:49.639151", "msg": "non-zero return code", "rc": 1, "start": "2025-10-27 09:42:46.303573", "stderr": "  error: subprocess-exited-with-error\n  \n  × Getting requirements to build wheel did not run successfully.\n  │ exit code: 1\n  ╰─> [67 lines of output]\n      /tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.\n      !!\n      \n              ********************************************************************************\n              Please consider removing the following classifiers in favor of a SPDX license expression:\n      \n              License :: OSI Approved :: MIT License\n      \n              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.\n              ********************************************************************************\n      \n      !!\n        self._finalize_license_expression()\n      running egg_info\n      writing lib3/PyYAML.egg-info/PKG-INFO\n      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt\n      writing top-level names to lib3/PyYAML.egg-info/top_level.txt\n      Traceback (most recent call last):\n        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 389, in <module>\n          main()\n        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 373, in main\n          json_out[\"return_val\"] = hook(**hook_input[\"kwargs\"])\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 143, in get_requires_for_build_wheel\n          return hook(config_settings)\n                 ^^^^^^^^^^^^^^^^^^^^^\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 331, in get_requires_for_build_wheel\n          return self._get_build_requires(config_settings, requirements=[])\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 301, in _get_build_requires\n          self.run_setup()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 317, in run_setup\n          exec(code, locals())\n        File \"<string>\", line 271, in <module>\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/__init__.py\", line 115, in setup\n          return distutils.core.setup(**attrs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py\", line 186, in setup\n          return run_commands(dist)\n                 ^^^^^^^^^^^^^^^^^^\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py\", line 202, in run_commands\n          dist.run_commands()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py\", line 1002, in run_commands\n          self.run_command(cmd)\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/dist.py\", line 1102, in run_command\n          super().run_command(command)\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py\", line 1021, in run_command\n          cmd_obj.run()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 312, in run\n          self.find_sources()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 320, in find_sources\n          mm.run()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 543, in run\n          self.add_defaults()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 581, in add_defaults\n          sdist.add_defaults(self)\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/sdist.py\", line 109, in add_defaults\n          super().add_defaults()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py\", line 245, in add_defaults\n          self._add_defaults_ext()\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py\", line 330, in _add_defaults_ext\n          self.filelist.extend(build_ext.get_source_files())\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        File \"<string>\", line 201, in get_source_files\n        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/cmd.py\", line 131, in __getattr__\n          raise AttributeError(attr)\n      AttributeError: cython_sources\n      [end of output]\n  \n  note: This error originates from a subprocess, and is likely not a problem with pip.\nERROR: Failed to build 'PyYAML' when getting requirements to build wheel", "stderr_lines": ["  error: subprocess-exited-with-error", "  ", "  × Getting requirements to build wheel did not run successfully.", "  │ exit code: 1", "  ╰─> [67 lines of output]", "      /tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/dist.py:759: SetuptoolsDeprecationWarning: License classifiers are deprecated.", "      !!", "      ", "              ********************************************************************************", "              Please consider removing the following classifiers in favor of a SPDX license expression:", "      ", "              License :: OSI Approved :: MIT License", "      ", "              See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.", "              ********************************************************************************", "      ", "      !!", "        self._finalize_license_expression()", "      running egg_info", "      writing lib3/PyYAML.egg-info/PKG-INFO", "      writing dependency_links to lib3/PyYAML.egg-info/dependency_links.txt", "      writing top-level names to lib3/PyYAML.egg-info/top_level.txt", "      Traceback (most recent call last):", "        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 389, in <module>", "          main()", "        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 373, in main", "          json_out[\"return_val\"] = hook(**hook_input[\"kwargs\"])", "                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "        File \"/home/ubuntu/myansible-venv/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/_in_process/_in_process.py\", line 143, in get_requires_for_build_wheel", "          return hook(config_settings)", "                 ^^^^^^^^^^^^^^^^^^^^^", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 331, in get_requires_for_build_wheel", "          return self._get_build_requires(config_settings, requirements=[])", "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 301, in _get_build_requires", "          self.run_setup()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/build_meta.py\", line 317, in run_setup", "          exec(code, locals())", "        File \"<string>\", line 271, in <module>", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/__init__.py\", line 115, in setup", "          return distutils.core.setup(**attrs)", "                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py\", line 186, in setup", "          return run_commands(dist)", "                 ^^^^^^^^^^^^^^^^^^", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/core.py\", line 202, in run_commands", "          dist.run_commands()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py\", line 1002, in run_commands", "          self.run_command(cmd)", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/dist.py\", line 1102, in run_command", "          super().run_command(command)", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/dist.py\", line 1021, in run_command", "          cmd_obj.run()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 312, in run", "          self.find_sources()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 320, in find_sources", "          mm.run()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 543, in run", "          self.add_defaults()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/egg_info.py\", line 581, in add_defaults", "          sdist.add_defaults(self)", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/command/sdist.py\", line 109, in add_defaults", "          super().add_defaults()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py\", line 245, in add_defaults", "          self._add_defaults_ext()", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py\", line 330, in _add_defaults_ext", "          self.filelist.extend(build_ext.get_source_files())", "                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "        File \"<string>\", line 201, in get_source_files", "        File \"/tmp/pip-build-env-bqpnjb_m/overlay/lib/python3.12/site-packages/setuptools/_distutils/cmd.py\", line 131, in __getattr__", "          raise AttributeError(attr)", "      AttributeError: cython_sources", "      [end of output]", "  ", "  note: This error originates from a subprocess, and is likely not a problem with pip.", "ERROR: Failed to build 'PyYAML' when getting requirements to build wheel"], "stdout": "Collecting docker\n  Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)\nCollecting docker-compose\n  Downloading docker_compose-1.29.2-py2.py3-none-any.whl.metadata (4.7 kB)\nCollecting requests>=2.26.0 (from docker)\n  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)\nCollecting urllib3>=1.26.0 (from docker)\n  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)\nCollecting PyYAML<6,>=3.10 (from docker-compose)\n  Downloading PyYAML-5.4.1.tar.gz (175 kB)\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'done'\n  Getting requirements to build wheel: started\n  Getting requirements to build wheel: finished with status 'error'", "stdout_lines": ["Collecting docker", "  Downloading docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)", "Collecting docker-compose", "  Downloading docker_compose-1.29.2-py2.py3-none-any.whl.metadata (4.7 kB)", "Collecting requests>=2.26.0 (from docker)", "  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)", "Collecting urllib3>=1.26.0 (from docker)", "  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)", "Collecting PyYAML<6,>=3.10 (from docker-compose)", "  Downloading PyYAML-5.4.1.tar.gz (175 kB)", "  Installing build dependencies: started", "  Installing build dependencies: finished with status 'done'", "  Getting requirements to build wheel: started", "  Getting requirements to build wheel: finished with status 'error'"]}
+2025-10-27 14:42:49,875 p=19082 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:42:49,875 p=19082 u=otabek n=ansible | 16.171.57.45               : ok=8    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:45:11,948 p=19235 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:45:12,055 p=19235 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:45:12,062 p=19235 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:45:18,486 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:18,489 p=19235 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:45:22,427 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:22,431 p=19235 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:45:25,507 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:25,512 p=19235 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:45:30,566 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:30,568 p=19235 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:45:33,311 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:33,315 p=19235 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:45:33,339 p=19235 u=otabek n=ansible | TASK [python3-venv o'rnatish] *************************************************************************************
+2025-10-27 14:45:37,016 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:37,019 p=19235 u=otabek n=ansible | TASK [venv yaratish] **********************************************************************************************
+2025-10-27 14:45:38,880 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:38,884 p=19235 u=otabek n=ansible | TASK [pipni yangilash] ********************************************************************************************
+2025-10-27 14:45:41,093 p=19235 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:45:41,096 p=19235 u=otabek n=ansible | TASK [docker kutubxonalarini o'rnatish] ***************************************************************************
+2025-10-27 14:45:44,414 p=19235 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:45:44,425 p=19235 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:45:44,431 p=19235 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:45:48,843 p=19235 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:45:48,848 p=19235 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] *****************************************************************
+2025-10-27 14:45:50,862 p=19235 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Error connecting: Error while fetching server API version: Not supported URL scheme http+docker"}
+2025-10-27 14:45:50,862 p=19235 u=otabek n=ansible | ...ignoring
+2025-10-27 14:45:50,865 p=19235 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:45:52,765 p=19235 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Unable to load docker-compose. Try `pip install docker-compose`. Error: Traceback (most recent call last):\n  File \"/tmp/ansible_community.docker.docker_compose_payload_z6nawb4t/ansible_community.docker.docker_compose_payload.zip/ansible_collections/community/docker/plugins/modules/docker_compose.py\", line 526, in <module>\n    from compose import __version__ as compose_version\nModuleNotFoundError: No module named 'compose'\n"}
+2025-10-27 14:45:52,766 p=19235 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:45:52,766 p=19235 u=otabek n=ansible | 16.171.57.45               : ok=11   changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2025-10-27 14:46:20,819 p=19399 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:46:20,916 p=19399 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:46:20,921 p=19399 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:46:23,689 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:23,692 p=19399 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:46:25,612 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:25,615 p=19399 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:46:27,628 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:27,631 p=19399 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:46:31,460 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:31,464 p=19399 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:46:33,285 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:33,289 p=19399 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:46:33,316 p=19399 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:46:33,321 p=19399 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:46:46,338 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:46,342 p=19399 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] *****************************************************************
+2025-10-27 14:46:50,707 p=19399 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:46:50,712 p=19399 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:46:55,691 p=19399 u=otabek n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ModuleNotFoundError: No module named 'docker'
+2025-10-27 14:46:55,692 p=19399 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker>=5.0.0 (Python >= 3.6) or docker<5.0.0 (Python 2.7)) on ip-172-31-100-42's Python /usr/bin/python3. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` (Python >= 3.6) or `pip install docker==4.4.4` (Python 2.7). The error was: No module named 'docker'"}
+2025-10-27 14:46:55,693 p=19399 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:46:55,693 p=19399 u=otabek n=ansible | 16.171.57.45               : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:52:22,498 p=19906 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:52:22,596 p=19906 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:52:22,601 p=19906 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:52:26,693 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:26,696 p=19906 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:52:28,566 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:28,569 p=19906 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:52:30,762 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:30,766 p=19906 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:52:34,639 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:34,643 p=19906 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:52:36,476 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:36,479 p=19906 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:52:36,505 p=19906 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:52:36,510 p=19906 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:52:45,248 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:45,252 p=19906 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] *****************************************************************
+2025-10-27 14:52:49,511 p=19906 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:52:49,515 p=19906 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:52:52,611 p=19906 u=otabek n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ModuleNotFoundError: No module named 'docker'
+2025-10-27 14:52:52,612 p=19906 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker>=5.0.0 (Python >= 3.6) or docker<5.0.0 (Python 2.7)) on ip-172-31-100-42's Python /usr/bin/python3. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` (Python >= 3.6) or `pip install docker==4.4.4` (Python 2.7). The error was: No module named 'docker'"}
+2025-10-27 14:52:52,613 p=19906 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:52:52,614 p=19906 u=otabek n=ansible | 16.171.57.45               : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:56:01,269 p=20134 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:56:01,369 p=20134 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:56:01,374 p=20134 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:56:06,442 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:06,445 p=20134 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:56:09,008 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:09,011 p=20134 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:56:11,596 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:11,601 p=20134 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:56:16,551 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:16,555 p=20134 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:56:19,117 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:19,120 p=20134 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:56:19,153 p=20134 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:56:19,158 p=20134 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:56:24,559 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:24,564 p=20134 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] *****************************************************************
+2025-10-27 14:56:26,569 p=20134 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:56:26,575 p=20134 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:56:28,456 p=20134 u=otabek n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ModuleNotFoundError: No module named 'docker'
+2025-10-27 14:56:28,457 p=20134 u=otabek n=ansible | fatal: [16.171.57.45]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (Docker SDK for Python: docker>=5.0.0 (Python >= 3.6) or docker<5.0.0 (Python 2.7)) on ip-172-31-100-42's Python /usr/bin/python3. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter, for example via `pip install docker` (Python >= 3.6) or `pip install docker==4.4.4` (Python 2.7). The error was: No module named 'docker'"}
+2025-10-27 14:56:28,458 p=20134 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:56:28,458 p=20134 u=otabek n=ansible | 16.171.57.45               : ok=7    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 14:57:51,100 p=20300 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2025-10-27 14:57:51,204 p=20300 u=otabek n=ansible | PLAY [docker paketlarini ornatish] ********************************************************************************
+2025-10-27 14:57:51,209 p=20300 u=otabek n=ansible | TASK [Docker ni ornatish] *****************************************************************************************
+2025-10-27 14:57:55,532 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:57:55,535 p=20300 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ***********************************************************************
+2025-10-27 14:57:57,555 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:57:57,558 p=20300 u=otabek n=ansible | TASK [v2 fileni yuklab olish] *************************************************************************************
+2025-10-27 14:57:59,708 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:57:59,712 p=20300 u=otabek n=ansible | TASK [start docker servise] ***************************************************************************************
+2025-10-27 14:58:03,998 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:58:04,001 p=20300 u=otabek n=ansible | TASK [add user to docker group] ***********************************************************************************
+2025-10-27 14:58:06,014 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:58:06,018 p=20300 u=otabek n=ansible | TASK [Reconnect to server] ****************************************************************************************
+2025-10-27 14:58:06,050 p=20300 u=otabek n=ansible | PLAY [docker app ni deploy qilish] ********************************************************************************
+2025-10-27 14:58:06,058 p=20300 u=otabek n=ansible | TASK [compose fileni copy qilish] *********************************************************************************
+2025-10-27 14:58:11,840 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:58:11,845 p=20300 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] *****************************************************************
+2025-10-27 14:58:13,980 p=20300 u=otabek n=ansible | ok: [16.171.57.45]
+2025-10-27 14:58:13,986 p=20300 u=otabek n=ansible | TASK [run docker compose] *****************************************************************************************
+2025-10-27 14:58:21,938 p=20300 u=otabek n=ansible | [WARNING]: Cannot parse event from line: 'time="2025-10-27T09:58:15Z" level=warning msg="/home/ubuntu/docker-
+compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential
+confusion"'. Please report this at https://github.com/ansible-
+collections/community.docker/issues/new?assignees=&labels=&projects=&template=bug_report.md
+
+2025-10-27 14:58:21,938 p=20300 u=otabek n=ansible | changed: [16.171.57.45]
+2025-10-27 14:58:21,952 p=20300 u=otabek n=ansible | PLAY RECAP ********************************************************************************************************
+2025-10-27 14:58:21,953 p=20300 u=otabek n=ansible | 16.171.57.45               : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 16:19:37,093 p=22764 u=otabek n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use
+-vvvv to see details
+
+2025-10-27 16:19:37,101 p=22764 u=otabek n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "192.168.77.250": {
+                "ansible_port": 22,
+                "ansible_user": "userjon",
+                "http_port": 8080
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "ungrouped",
+            "aws",
+            "metagroup"
+        ]
+    },
+    "aws": {
+        "hosts": [
+            "16.171.57.45"
+        ]
+    },
+    "database": {
+        "hosts": [
+            "192.168.77.250"
+        ]
+    },
+    "metagroup": {
+        "children": [
+            "web-server",
+            "database",
+            "ungrouped"
+        ]
+    },
+    "web-server": {
+        "hosts": [
+            "192.168.77.250"
+        ]
+    }
+}
+2025-10-27 17:04:25,385 p=24589 u=otabek n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml
+
+The error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+docker_username: administratordevops
+^ here
+
+2025-10-27 17:13:15,790 p=25762 u=otabek n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml
+
+The error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml': line 1, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+docker_username: "administratordevops"
+^ here
+
+2025-10-27 17:17:31,832 p=26407 u=otabek n=ansible | ERROR! A playbook must be a list of plays, got a <class 'ansible.parsing.yaml.objects.AnsibleMapping'> instead: /home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml
+
+The error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/docker_authorize.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+docker_username: "administratordevops"
+^ here
+
+2025-10-27 17:21:13,019 p=27107 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 17:21:13,025 p=27107 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 17:21:13,116 p=27107 u=otabek n=ansible | fatal: [13.60.4.65 -> localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2025-10-27 17:21:13,117 p=27107 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 17:21:13,117 p=27107 u=otabek n=ansible | 13.60.4.65                 : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 17:27:57,436 p=27867 u=otabek n=ansible | ERROR! 'become_ask_pass' is not a valid attribute for a Play
+
+The error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/deploy_docker.yaml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: docker paketlarini ornatish
+  ^ here
+
+2025-10-27 17:34:07,057 p=28813 u=otabek n=ansible | ERROR! 'become_ask_pass' is not a valid attribute for a Play
+
+The error appears to be in '/home/otabek/devops_homeworks/nodejs-app-ansible/deploy_docker.yaml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: docker paketlarini ornatish
+  ^ here
+
+2025-10-27 17:36:21,558 p=29427 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 17:36:21,563 p=29427 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 17:36:21,652 p=29427 u=otabek n=ansible | fatal: [16.171.227.156 -> localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2025-10-27 17:36:21,652 p=29427 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 17:36:21,652 p=29427 u=otabek n=ansible | 16.171.227.156             : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 17:47:39,611 p=30154 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 17:47:39,616 p=30154 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 17:47:39,698 p=30154 u=otabek n=ansible | fatal: [13.49.74.204 -> localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2025-10-27 17:47:39,699 p=30154 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 17:47:39,699 p=30154 u=otabek n=ansible | 13.49.74.204               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 17:50:50,954 p=30928 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 17:50:50,959 p=30928 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 17:50:51,042 p=30928 u=otabek n=ansible | fatal: [51.20.127.145 -> localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2025-10-27 17:50:51,042 p=30928 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 17:50:51,042 p=30928 u=otabek n=ansible | 51.20.127.145              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 17:56:25,686 p=31509 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 17:56:25,692 p=31509 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 17:56:25,774 p=31509 u=otabek n=ansible | fatal: [56.228.7.154 -> localhost]: FAILED! => {"changed": false, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}
+2025-10-27 17:56:25,774 p=31509 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 17:56:25,774 p=31509 u=otabek n=ansible | 56.228.7.154               : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-10-27 18:02:52,120 p=32415 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 18:02:52,125 p=32415 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 18:03:08,495 p=32415 u=otabek n=ansible | ok: [13.53.198.244 -> localhost]
+2025-10-27 18:03:08,497 p=32415 u=otabek n=ansible | TASK [Docker ni ornatish] ******************************************************
+2025-10-27 18:03:09,212 p=32415 u=otabek n=ansible | fatal: [13.53.198.244]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '13.53.198.244' (ED25519) to the list of known hosts.\r\nubuntu@13.53.198.244: Permission denied (publickey).", "unreachable": true}
+2025-10-27 18:03:09,213 p=32415 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 18:03:09,213 p=32415 u=otabek n=ansible | 13.53.198.244              : ok=1    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 18:25:07,252 p=34330 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 18:25:07,260 p=34330 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 18:25:17,637 p=34330 u=otabek n=ansible | ok: [16.171.116.248 -> localhost]
+2025-10-27 18:25:17,640 p=34330 u=otabek n=ansible | TASK [Docker ni ornatish] ******************************************************
+2025-10-27 18:25:18,450 p=34330 u=otabek n=ansible | fatal: [16.171.116.248]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '16.171.116.248' (ED25519) to the list of known hosts.\r\nubuntu@16.171.116.248: Permission denied (publickey).", "unreachable": true}
+2025-10-27 18:25:18,451 p=34330 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 18:25:18,451 p=34330 u=otabek n=ansible | 16.171.116.248             : ok=1    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-10-27 18:41:55,843 p=36047 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 18:41:55,851 p=36047 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 18:42:06,231 p=36047 u=otabek n=ansible | ok: [16.170.221.195 -> localhost]
+2025-10-27 18:42:06,233 p=36047 u=otabek n=ansible | TASK [Docker ni ornatish] ******************************************************
+2025-10-27 18:42:31,383 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:31,384 p=36047 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ************************************
+2025-10-27 18:42:33,320 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:33,322 p=36047 u=otabek n=ansible | TASK [v2 fileni yuklab olish] **************************************************
+2025-10-27 18:42:36,034 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:36,042 p=36047 u=otabek n=ansible | TASK [start docker servise] ****************************************************
+2025-10-27 18:42:40,008 p=36047 u=otabek n=ansible | ok: [16.170.221.195]
+2025-10-27 18:42:40,009 p=36047 u=otabek n=ansible | TASK [add user to docker group] ************************************************
+2025-10-27 18:42:41,849 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:41,852 p=36047 u=otabek n=ansible | TASK [Reconnect to server] *****************************************************
+2025-10-27 18:42:41,883 p=36047 u=otabek n=ansible | PLAY [docker app ni deploy qilish] *********************************************
+2025-10-27 18:42:41,891 p=36047 u=otabek n=ansible | TASK [compose fileni copy qilish] **********************************************
+2025-10-27 18:42:47,996 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:47,999 p=36047 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] ******************************
+2025-10-27 18:42:50,050 p=36047 u=otabek n=ansible | fatal: [16.170.221.195]: FAILED! => {"changed": false, "msg": "Error connecting: Error while fetching server API version: Not supported URL scheme http+docker"}
+2025-10-27 18:42:50,050 p=36047 u=otabek n=ansible | ...ignoring
+2025-10-27 18:42:50,054 p=36047 u=otabek n=ansible | TASK [run docker compose] ******************************************************
+2025-10-27 18:42:58,495 p=36047 u=otabek n=ansible | [WARNING]: Cannot parse event from line: 'time="2025-10-27T13:42:51Z"
+level=warning msg="/home/admin/docker-compose.yml: the attribute `version` is
+obsolete, it will be ignored, please remove it to avoid potential confusion"'.
+Please report this at https://github.com/ansible-collections/community.docker/i
+ssues/new?assignees=&labels=&projects=&template=bug_report.md
+
+2025-10-27 18:42:58,495 p=36047 u=otabek n=ansible | changed: [16.170.221.195]
+2025-10-27 18:42:58,504 p=36047 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 18:42:58,504 p=36047 u=otabek n=ansible | 16.170.221.195             : ok=9    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
+2025-10-27 19:03:57,105 p=37691 u=otabek n=ansible | PLAY [docker paketlarini ornatish] *********************************************
+2025-10-27 19:03:57,112 p=37691 u=otabek n=ansible | TASK [kutishni sozlash] ********************************************************
+2025-10-27 19:04:07,496 p=37691 u=otabek n=ansible | ok: [16.171.235.133 -> localhost]
+2025-10-27 19:04:07,498 p=37691 u=otabek n=ansible | TASK [Docker ni ornatish] ******************************************************
+2025-10-27 19:04:32,888 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:04:32,889 p=37691 u=otabek n=ansible | TASK [docker compose uchun folder yaratish] ************************************
+2025-10-27 19:04:34,811 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:04:34,814 p=37691 u=otabek n=ansible | TASK [v2 fileni yuklab olish] **************************************************
+2025-10-27 19:04:37,422 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:04:37,431 p=37691 u=otabek n=ansible | TASK [start docker servise] ****************************************************
+2025-10-27 19:04:41,284 p=37691 u=otabek n=ansible | ok: [16.171.235.133]
+2025-10-27 19:04:41,286 p=37691 u=otabek n=ansible | TASK [add user to docker group] ************************************************
+2025-10-27 19:04:43,089 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:04:43,091 p=37691 u=otabek n=ansible | TASK [Reconnect to server] *****************************************************
+2025-10-27 19:04:43,122 p=37691 u=otabek n=ansible | PLAY [docker app ni deploy qilish] *********************************************
+2025-10-27 19:04:43,134 p=37691 u=otabek n=ansible | TASK [compose fileni copy qilish] **********************************************
+2025-10-27 19:04:49,210 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:04:49,215 p=37691 u=otabek n=ansible | TASK [docker login qilish (private image bo'lsa)] ******************************
+2025-10-27 19:04:51,221 p=37691 u=otabek n=ansible | fatal: [16.171.235.133]: FAILED! => {"changed": false, "msg": "Error connecting: Error while fetching server API version: Not supported URL scheme http+docker"}
+2025-10-27 19:04:51,221 p=37691 u=otabek n=ansible | ...ignoring
+2025-10-27 19:04:51,224 p=37691 u=otabek n=ansible | TASK [run docker compose] ******************************************************
+2025-10-27 19:05:00,682 p=37691 u=otabek n=ansible | [WARNING]: Cannot parse event from line: 'time="2025-10-27T14:04:53Z"
+level=warning msg="/home/admin/docker-compose.yml: the attribute `version` is
+obsolete, it will be ignored, please remove it to avoid potential confusion"'.
+Please report this at https://github.com/ansible-collections/community.docker/i
+ssues/new?assignees=&labels=&projects=&template=bug_report.md
+
+2025-10-27 19:05:00,683 p=37691 u=otabek n=ansible | changed: [16.171.235.133]
+2025-10-27 19:05:00,687 p=37691 u=otabek n=ansible | PLAY RECAP *********************************************************************
+2025-10-27 19:05:00,687 p=37691 u=otabek n=ansible | 16.171.235.133             : ok=9    changed=6    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
