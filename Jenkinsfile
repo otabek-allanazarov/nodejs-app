@@ -3,20 +3,20 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = "administratordevops/nodejs-app"
-        DOCKER_TAG = "1.0"
+        DOCKER_TAG = "${BUILD_NUMBER}"
     }
 
     stages {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/otabek-allanazarov/nodejs-app.git'
+                git branch: 'main', url: 'https://github.com/otabek-allanazarov/nodejs-app.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
             }
         }
 
@@ -27,14 +27,14 @@ pipeline {
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
-                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                    sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
                 }
             }
         }
 
         stage('Push Image') {
             steps {
-                sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
+                sh "docker push ${DOCKER_IMAGE}:${DOCKER_TAG}"
             }
         }
 
