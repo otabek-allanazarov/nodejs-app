@@ -1,24 +1,42 @@
 pipeline {
     agent any
 
+    environment {
+        DOCKER_IMAGE = "administratordevops/nodejs-app"
+        DOCKER_TAG = "1.0"
+    }
+
     stages {
-        stage('Build') {
+
+        stage('Clone Repository') {
             steps {
-                echo 'Build stage ishlayapti' &&
-                echo 'Hello world'
+                git 'https://github.com/otabek-allanazarov/nodejs-app.git'
             }
         }
 
-        stage('Test') {
+        stage('Build Docker Image') {
             steps {
-                echo 'Test stage ishlayapti'
+                sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
             }
         }
 
-        stage('Deploy') {
+        stage('Login to DockerHub') {
             steps {
-                echo 'Deploy stage ishlayapti'
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                }
             }
         }
+
+        stage('Push Image') {
+            steps {
+                sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
+            }
+        }
+
     }
 }
