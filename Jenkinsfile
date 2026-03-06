@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build stage ishlayapti'
+                echo 'Hello world'
             }
         }
 
