@@ -1,6 +1,6 @@
 version: "3.9"
 services:
   app:
-    image: avazxonov/ingress_host_based_car:1.0
+    image: "${DOCKER_IMAGE}:${DOCKER_TAG}"
     ports:
-      - 3000:3000
+      - 5000:3000
