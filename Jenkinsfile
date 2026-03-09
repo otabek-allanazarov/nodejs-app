@@ -32,7 +32,7 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: "${SSH_KEY}", keyFileVariable: 'KEY')]) {
                     sh """
-                    ssh -p ${SSH_PORT} -i \$KEY -o StrictHostKeyChecking=no ${SERVER_USER}@${SERVER_IP} '
+                    ssh -p ${SSH_PORT} -i \$KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${SERVER_USER}@${SERVER_IP} '
                         cd /home/${SERVER_USER}/nodejs-app &&
                         git fetch --all &&
                         git reset --hard origin/main &&
