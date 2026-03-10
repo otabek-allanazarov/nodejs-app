@@ -32,6 +32,7 @@ stage('Deploy via Docker-Compose') {
     steps {
         withCredentials([sshUserPrivateKey(credentialsId: "${SSH_KEY}", keyFileVariable: 'KEY')]) {
             sh """
+            chmod 600 $KEY &&
             ssh -p ${SSH_PORT} -i $KEY ${SERVER_USER}@${SERVER_IP} 'mkdir -p /home/${SERVER_USER}/nodejs-app' &&
             scp -P ${SSH_PORT} -i $KEY docker-compose.yml ${SERVER_USER}@${SERVER_IP}:/home/${SERVER_USER}/nodejs-app/docker-compose.yml &&
             sleep 10 &&
