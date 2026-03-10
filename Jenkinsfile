@@ -5,7 +5,7 @@ pipeline {
         DOCKER_IMAGE = "administratordevops/nodejs-app"
         DOCKER_TAG = "${BUILD_NUMBER}"
         SSH_PORT = 30801
-        SERVER_IP = "195.158.24.178"
+        SERVER_IP = "192.168.77.110"
         SERVER_USER = "otabek"
         SSH_KEY = "server-ssh-key" // Jenkins credentials ID
         REPO_URL = "https://github.com/otabek-allanazarov/nodejs-app.git"
@@ -33,7 +33,7 @@ stage('Deploy via Docker-Compose') {
         withCredentials([sshUserPrivateKey(credentialsId: "${SSH_KEY}", keyFileVariable: 'KEY')]) {
             sh """
             ssh -p ${SSH_PORT} -i $KEY ${SERVER_USER}@${SERVER_IP} 'mkdir -p /home/${SERVER_USER}/nodejs-app' &&
-            scp -p ${SSH_PORT} -i $KEY docker-compose.yml ${SERVER_USER}@${SERVER_IP}:/home/${SERVER_USER}/nodejs-app/docker-compose.yml &&
+            scp -P ${SSH_PORT} -i $KEY docker-compose.yml ${SERVER_USER}@${SERVER_IP}:/home/${SERVER_USER}/nodejs-app/docker-compose.yml &&
             sleep 10 &&
             ssh -p ${SSH_PORT} -i $KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${SERVER_USER}@${SERVER_IP} '
                 cd /home/${SERVER_USER}/nodejs-app &&
