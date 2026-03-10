@@ -42,9 +42,6 @@ pipeline {
 
                     ssh -o StrictHostKeyChecking=no -p ${SSH_PORT} -i $KEY ${SERVER_USER}@${SERVER_IP} "
                         cd /home/${SERVER_USER}/nodejs-app &&
-                        git fetch --all &&
-                        git reset --hard origin/main &&
-                        git clean -fd &&
                         export DOCKER_IMAGE=${DOCKER_IMAGE} &&
                         export DOCKER_TAG=${DOCKER_TAG} &&
                         docker-compose pull app &&
