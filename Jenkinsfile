@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "administratordevops/nodejs-app"
         DOCKER_TAG = "${BUILD_NUMBER}"
-        SSH_PORT = 30801
+        SSH_PORT = 22
         SERVER_IP = "192.168.77.110"
         SERVER_USER = "otabek"
         SSH_KEY = "server-ssh-key" // Jenkins credentials ID
