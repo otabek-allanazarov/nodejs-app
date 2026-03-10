@@ -32,10 +32,10 @@ stage('Deploy via Docker-Compose') {
     steps {
         withCredentials([sshUserPrivateKey(credentialsId: "${SSH_KEY}", keyFileVariable: 'KEY')]) {
             sh """
-            ssh -p ${SSH_PORT} -i $SSH_KEY ${SERVER_USER}@${SERVER_IP} 'mkdir -p /home/${SERVER_USER}/nodejs-app' &&
-            scp -P ${SSH_PORT} -i $SSH_KEY docker-compose.yml ${SERVER_USER}@${SERVER_IP}:/home/${SERVER_USER}/nodejs-app/docker-compose.yml &&
+            ssh -p ${SSH_PORT} -i $KEY ${SERVER_USER}@${SERVER_IP} 'mkdir -p /home/${SERVER_USER}/nodejs-app' &&
+            scp -P ${SSH_PORT} -i $KEY docker-compose.yml ${SERVER_USER}@${SERVER_IP}:/home/${SERVER_USER}/nodejs-app/docker-compose.yml &&
             sleep 10 &&
-            ssh -p ${SSH_PORT} -i $SSH_KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${SERVER_USER}@${SERVER_IP} '
+            ssh -p ${SSH_PORT} -i $KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 ${SERVER_USER}@${SERVER_IP} '
                 cd /home/${SERVER_USER}/nodejs-app &&
                 git fetch --all &&
                 git reset --hard origin/main &&
